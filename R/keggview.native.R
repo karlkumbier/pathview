@@ -82,7 +82,7 @@ if(multi.state) {
 
 for(np in 1:nplots){
 #plot setup
- img.file =paste(pathway.name,pn.suffix[np],"png", sep=".")
+ img.file = file.path(kegg.dir, paste(pathway.name, pn.suffix[np],"png", sep="."))
  out.msg=sprintf(out.fmt, img.file)
  message("Info: ", out.msg)
   png(img.file, width = width, height = height, res=res)
